@@ -1,10 +1,10 @@
 <?php
 
+use App\Http\Controllers\CustomerController;
 use App\Models\Customer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\UserController;
-use App\Http\Controllers\Api\CustomerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,7 +23,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::apiResource('users', UserController::class);
 
-Route::apiResource('customers', CustomerController::class);
 
 
 

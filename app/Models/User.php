@@ -17,10 +17,15 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+
+    public function hasRole($role)
+    {
+        // Kiểm tra xem vai trò của người dùng có khớp với vai trò yêu cầu không
+        return $this->role === $role;
+    }
+
     protected $fillable = [
-        'name',
-        'email',
-        'password',
+        'name', 'email', 'password', 'role', // Thêm 'role' vào đây
     ];
 
     /**

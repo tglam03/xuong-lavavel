@@ -20,11 +20,18 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         //    bai tap buổi 2
+//        $this->call([
+//            ProductsTableSeeder::class,
+//            SalesTableSeeder::class,
+//            ExpensesTableSeeder::class,
+//            TaxesTableSeeder::class,
+//        ]);
+
         $this->call([
-            ProductsTableSeeder::class,
-            SalesTableSeeder::class,
-            ExpensesTableSeeder::class,
-            TaxesTableSeeder::class,
+            ClassroomsTableSeeder::class,
+            SubjectsTableSeeder::class,
+            StudentsTableSeeder::class,
+            // PassportsTableSeeder::class // Không cần gọi vì đã thêm trong StudentsTableSeeder
         ]);
     }
 }
